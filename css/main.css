@@ -1,0 +1,225 @@
+/*font-family: 'Kaushan Script', cursive;
+font-family: 'Gloria Hallelujah', cursive;*/
+
+body {
+  font-family: 'Gloria Halleluja', cursive;
+}
+
+h1,
+legend {
+  font-family: 'Kaushan Script', cursive;
+}
+
+legend {
+  font-size: 1.75em;
+}
+
+header {
+  background-color: #4d0000;
+  overflow: hidden;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+#signup {
+  margin-top: 2em;
+  text-align: center;
+}
+
+#signup::before{
+  content: "";
+  background-color: #4d0000;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 25%;
+}
+
+.divA,
+.divB {
+  height: 1px;
+  width: 90%;
+  margin: 0 5%;
+  border-bottom: 3px solid #4d0000;
+}
+
+.divB {
+  border-bottom: 1px solid #4d0000;
+}
+
+.form1 {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.form2 {
+  text-align: left;
+  margin-top: 15px;
+}
+
+::-webkit-input-placeholder {
+  text-align: right;
+  color: #000;
+}
+
+#contact_info {
+  margin: 10px 0;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  background-color: #4d0000;
+  color: #fff;
+  border: 0;
+}
+
+#newsletter {
+  border-top: 1px solid #4d0000;
+  width: 90%;
+  margin: 0 5%;
+}
+
+fieldset {
+  border: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  display: block;
+  margin: 10px auto;
+  width: 90%;
+  border: 0;
+  background-color: #ccc;
+}
+
+select,
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+button {
+  font-family: 'Kaushan Script', cursive;
+  background-color: #4d0000;
+  color: #fff;
+}
+
+#html_news,
+#css_news,
+#javascript_news,
+#html_format,
+#plain_format {
+  display: inline;
+  width: 10%;
+  margin-left: 10px;
+}
+
+textarea {
+  width: 88%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding-top: 1em;
+}
+
+/***********************
+MEDIA QUERIES
+***********************/
+
+@media (min-width: 760px) {
+
+  #container {
+    max-width: 70%;
+    margin: 0 15%;
+  }
+
+  .divA,
+  .divB {
+    width: 93%;
+  }
+
+  #contact_info {
+    padding-left: 24px;
+  }
+
+  #name,
+  #email,
+  #number,
+  #address,
+  #city,
+  #state {
+    display: inline-block;
+    margin: 10px auto;
+    width: 60%;
+    float: right;
+  }
+
+  #zip {
+    display: inline-block;
+    width: 30%;
+    float: left;
+    margin-left: 1em;
+  }
+
+  .name,
+  .email,
+  .number,
+  .address,
+  .city,
+  .state,
+  .zip {
+    display: inline-block;
+    width: 30%;
+    float: left;
+    margin: 10px auto;
+    clear: both;
+    padding-left: 2em;
+  }
+
+  #newsletter {
+    width: 95%;
+  }
+
+  textarea {
+    width: 89%;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+
+  #container {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  fieldset {
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+  }
+
+  #zip {
+    margin-left: .5em;
+  }
+
+  #newsletter {
+    border: none;
+  }
+
+  textarea {
+    width: 88.2%;
+  }
+
+
+}
