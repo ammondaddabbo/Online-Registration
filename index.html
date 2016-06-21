@@ -13,6 +13,7 @@
       <h1>The Code Review</h1>
     </header>
     <div id="container">
+      <div class="border"></div>
       <div id="signup">
         <h3>Signup for our newsletter</h3>
         <p>Get the latest news on how your code is doing right in your inbox</p>
@@ -21,8 +22,16 @@
       </div>
       <div class="form1">
         <form>
-          <fieldset>
+          <fieldset class="clearfix">
             <legend id="contact_info">Contact Information</legend>
+
+            <label for="suffix" class="suffix">Suffix</label>
+            <select id="suffix" name="user_suffix">
+              <option>Mr.</option>
+              <option>Mrs.</option>
+              <option>Ms.</option>
+            </select><br><br>
+
             <label for="name" class="name">Full Name</label>
             <input type="text" id="name" name="user_name" placeholder="Required">
 
@@ -96,6 +105,10 @@
             <label for="zip" class="zip">Zip Code</label>
             <input type="text" id="zip" name="user_zip" placeholder="00000">
 
+            <input type="radio" id="over_13" value="over_13" name="age"><label for="over_13" class="age">13 or Older</label>
+
+            <input type="radio" id="under_13" value="under_13" name="age"><label for="under_13" class="age">Younger than 13</label><br>
+
           </fieldset>
         </form>
       </div>
@@ -122,6 +135,7 @@
             <button type="submit">Sign Up</button>
           </fieldset>
         </form>
+        <div class="border"></div>
       </div>
     </div>
     <footer>

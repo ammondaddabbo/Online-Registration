@@ -1,8 +1,13 @@
 /*font-family: 'Kaushan Script', cursive;
 font-family: 'Gloria Hallelujah', cursive;*/
 
+
 body {
   font-family: 'Gloria Halleluja', cursive;
+}
+
+h1 {
+  text-shadow: .12em .12em .1em #888;
 }
 
 h1,
@@ -23,17 +28,16 @@ header {
 }
 
 #signup {
-  margin-top: 2em;
+  margin-top: 1em;
   text-align: center;
 }
 
-#signup::before{
-  content: "";
-  background-color: #4d0000;
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border-radius: 25%;
+.border {
+  height: 1em;
+  width: 56%;
+  margin: 2em 22% 1em;
+  background: radial-gradient(#4d0000, transparent 70%);
+  border: none;
 }
 
 .divA,
@@ -67,10 +71,33 @@ header {
   margin: 10px 0;
 }
 
-input:focus,
-textarea:focus,
-select:focus,
-button:focus {
+#name:hover,
+#email:hover,
+#number:hover,
+#address:hover,
+#city:hover,
+#state:hover,
+#suffix:hover,
+#age:hover,
+#zip:hover,
+button:hover,
+textarea:hover {
+  transition: background-color 1s ease;
+  background-color: darkgrey;
+}
+
+#name:focus,
+#email:focus,
+#number:focus,
+#address:focus,
+#city:focus,
+#state:focus,
+#suffix:focus,
+#age:focus,
+#zip:focus,
+button:focus,
+textarea:focus {
+  transition: background-color 1.5s ease;
   background-color: #4d0000;
   color: #fff;
   border: 0;
@@ -86,15 +113,43 @@ fieldset {
   border: 0;
 }
 
-input,
+#html_news,
+#css_news,
+#javascript_news,
+#html_format,
+#plain_format,
+#suffix,
+#age,
+#name,
+#email,
+#number,
+#address,
+#city,
+#state,
+#suffix,
+#age,
+#zip,
 button,
-select,
 textarea {
   display: block;
   margin: 10px auto;
   width: 90%;
   border: 0;
   background-color: #ccc;
+}
+
+#age,
+#name,
+#email,
+#number,
+#address,
+#city,
+#state,
+#suffix,
+#age,
+#zip,
+button {
+  box-shadow: .4em .4em .6em #888;
 }
 
 select,
@@ -113,10 +168,20 @@ button {
 #css_news,
 #javascript_news,
 #html_format,
-#plain_format {
+#plain_format,
+#suffix,
+#age,
+#over_13,
+#under_13 {
   display: inline;
-  width: 10%;
+  width: 5%;
   margin-left: 10px;
+  margin-right: 10px;
+}
+
+#suffix {
+  width: 3.5em;
+  float: right;
 }
 
 textarea {
@@ -142,6 +207,12 @@ MEDIA QUERIES
     margin: 0 15%;
   }
 
+  .border {
+    width: 68%;
+    margin: 2em 16% 1em;
+    height: 1em;
+  }
+
   .divA,
   .divB {
     width: 93%;
@@ -156,18 +227,37 @@ MEDIA QUERIES
   #number,
   #address,
   #city,
-  #state {
+  #state,
+  #zip {
     display: inline-block;
     margin: 10px auto;
     width: 60%;
     float: right;
   }
 
-  #zip {
+  #over_13,
+  #under_13 {
+    display: inline-block;
+    margin: 10px auto;
+    width: 10%;
+    float: right;
+    margin-right: 50%;
+  }
+
+  #html_news,
+  #css_news,
+  #javascript_news,
+  #html_format,
+  #plain_format {
+    width: 4%;
+  }
+
+  #zip,
+  #suffix {
     display: inline-block;
     width: 30%;
-    float: left;
-    margin-left: 1em;
+    float: right;
+    margin-right: 0;
   }
 
   .name,
@@ -176,10 +266,11 @@ MEDIA QUERIES
   .address,
   .city,
   .state,
-  .zip {
+  .zip,
+  .suffix,
+  .age {
     display: inline-block;
     width: 30%;
-    float: left;
     margin: 10px auto;
     clear: both;
     padding-left: 2em;
@@ -209,10 +300,6 @@ MEDIA QUERIES
     margin-left: 5%;
   }
 
-  #zip {
-    margin-left: .5em;
-  }
-
   #newsletter {
     border: none;
   }
@@ -221,5 +308,23 @@ MEDIA QUERIES
     width: 88.2%;
   }
 
+  .border {
+    clear: both;
+  }
+
+  #under_13,
+  #over_13 {
+    clear: both;
+  }
+
+  footer {
+    padding-top: 0;
+  }
+
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 }
